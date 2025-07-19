@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "npm": {
+    "rangeStrategy": "bump",
+    "minimumReleaseAge": "3 days"
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["node"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchDepTypes": "peerDependencies",
+      "enabled": false
+    }
+  ]
+}

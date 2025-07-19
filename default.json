@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":timezone(Europe/Paris)",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    "github>a11ylint/renovate-config:npm",
+    "github>a11ylint/renovate-config:onboarding",
+    "github>a11ylint/renovate-config:github-action"
+  ],
+  "dependencyDashboard": false,
+  "labels": ["dependencies"],
+  "prConcurrentLimit": 2,
+  "prHourlyLimit": 2,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["High"]
+    }
+  ]
+}
